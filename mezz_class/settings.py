@@ -353,9 +353,9 @@ BLOG_USE_FEATURED_IMAGE = True
 
 ###
 # try:
-#     from local_settings import *
+# 	from .local_settings import *
 # except ImportError:
-#     pass
+# 	pass
 
 
 
