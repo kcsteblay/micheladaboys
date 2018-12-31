@@ -113,6 +113,15 @@
   <img src="{{STATIC_URL}}img/home-mb.jpg" class="img-fluid">
 </header>
 
+{% elif request.path == '/pages/feed/' %}
+
+<header style="height:55px" class="bg-dark text-white">
+  <h1 class="ml-3">Michelada Boys</h1>
+</header>
+<div id="pixlee_container" class="w-100"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'-D4yus1XyBxryQiV18ns'});Pixlee.addSimpleWidget({widgetId:'13474'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
+
+<div class="w-100" style="background-color: white;height: 30px;margin-top: -10px;position: relative; z-index: 100;"></div>
+
 {% else %}
 
 <header style="height:55px" class="bg-dark text-white">
@@ -131,13 +140,7 @@
 
 <!-- Footer -->
 
-{% if request.path == '/pages/feed/' %}
 
-<div id="pixlee_container" class="w-100"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'-D4yus1XyBxryQiV18ns'});Pixlee.addSimpleWidget({widgetId:'13474'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
-
-<div class="w-100" style="background-color: white; float: bottom;height: 30px;margin-top: -50px;position: relative; z-index: 100;"></div>
-
-{% endif %}
 
 
 {% block footer_js %}
