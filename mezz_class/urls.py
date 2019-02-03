@@ -8,6 +8,8 @@ from django.views.i18n import set_language
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
 
+from cartridge.shop.views import order_history
+
 # To use a page homepage in the admin
 # from mezzanine.pages.views import page 
 
@@ -32,6 +34,11 @@ if settings.USE_MODELTRANSLATION:
     ]
 
 urlpatterns += [
+
+    # Cartridge URLs.
+    url("^shop/", include("cartridge.shop.urls")),
+    url("^account/orders/$", order_history, name="shop_order_history"),
+
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
 
